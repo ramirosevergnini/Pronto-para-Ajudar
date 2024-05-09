@@ -36,7 +36,7 @@ function sendMessage(){
     btnSubmit.style.cursor = 'not-allowed'
     message.disabled = true
 
-    fetch("https://api.openai.com/v1/completions",{
+    fetch("",{
         method: 'POST',
         headers: {
             Accept: "application/json",
@@ -99,3 +99,4 @@ function showHistory(message,response){
     historyBox.scrollTop = historyBox.scrollHeight
 }
 
+        
