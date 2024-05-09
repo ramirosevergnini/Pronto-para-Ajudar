@@ -85,6 +85,27 @@ nav {
   height: auto;
   transition: all 0.3s linear;
 }
+
+#locasInformacoes{
+    background-color: white;
+    text-align: left;
+}
+#locasInformacoes {
+    display: flex;
+}
+#numeros, #chatBot {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+#numeroDestaque{
+    color: red;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    line-height: 1;
+}
+
 footer{
     background-color: black;
     height: 30px;
