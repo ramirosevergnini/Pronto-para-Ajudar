@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/*versão mobile first*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Alata', sans-serif;
+  background-color: rgb(125, 146, 238);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+/* Navbar */
+nav {
+  background: #1700eb;
+  box-shadow: 3px 0px 2px #c95858;
+  color: aliceblue;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  transform: rotate(30deg);
+}
+
+.logo {
+  height: 40px;
+}
+
+.links a {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+  color: antiquewhite;
+}
+
+.links a:hover {
+  background: rgb(5, 107, 240);
+  color: wheat;
+  padding-left: 1.5rem;
+}
+
+/* THE LOGIC */
+
+/* First: Hide the show icon by default */
+.social-icons {
+  display: none;
+}
+
+/* 2. Hide the links if it's height is not enough to accommodate. That's how html works, if it's height is not enough it won't show, so as the user reduces the size of the window it decreases the height of the parent of the link item but the problem is that if you don't give it overflow:hidden it will jump to next line so hidden:0 and overflow:hidden will hide an html parent container */
+
+/* By default let's hide this */
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+/* This is the class we will add to the links by js to show the links again because it has a height */
+.show-links {
+  height: auto;
+  transition: all 0.3s linear;
+}
+footer{
+    background-color: black;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+  }
+
+/* Implementations */
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  /* Hide toggle on the large screen */
+  .nav-toggle {
+    display: none;
+  }
+  /* Give the links a height to show on a large screen */
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+    color: antiquewhite;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+    color: #00a2ff;
+  }
+  /* Show the social icons on large screen */
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: wheat;
+    transition: all 0.3s linear;
+  }
+  .social-icons a:hover {
+    color: var(--clr-primary-7);
+  }
+}
