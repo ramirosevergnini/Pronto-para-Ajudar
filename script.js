@@ -13,7 +13,6 @@ navToggle.addEventListener('click', () => {
 
 });
 
-import { GoogleGenerativeAI } from "@google/generative-ai";
 const API_KEY = "AIzaSyBC6O7pGbjPwZ-bx8Ko6Uy9pcHi_HL67d4"; // Replace with your actual OpenAI API key
 
 export async function sendMessage() {

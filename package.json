@@ -1,0 +1,12 @@
+{
+  "name": "pronto-para-ajudar",
+  "version": "1.0.0",
+  "description": "Mediante ao desastre que está acontecendo no Rio Grande do Sul, resolvi criar um projeto que auxilia o usuário com informações necessárias e um bate papo eficiente durante o desastre.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
